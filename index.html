@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Interactiva 🚀</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+
+<header>
+    <h1>Física Interactiva 🚀</h1>
+    <p>Tu guía sencilla para entender el movimiento.</p>
+</header>
+
+
+<nav class="menu-nav">
+    <button class="btn-menu" onclick="mostrarTema('mru')">
+        El Movimiento Rectilíneo Uniforme
+    </button>
+    <button class="btn-menu" onclick="mostrarTema('mrua')">
+        El Movimiento Rectilíneo Uniformemente Acelerado
+    </button>
+</nav>
+
+
+<main class="container">
+    <section id="mru" class="tema active">
+        <div class="info">
+            <h2>¿Qué es el MRU?</h2>
+            <p>Es cuando algo se mueve en línea recta y siempre a la misma velocidad.</p>
+        </div>
+
+
+        
+
+
+        <div class="formula-box">
+            <h2>Fórmula Base</h2>
+            <p class="math-display">d = v * t</p>
+        </div>
+
+
+        <div class="calculator">
+            <h2 class="pink-title">¡Calculadora de MRU!</h2>
+            <p class="instruction">Deja vacío el campo que quieras calcular:</p>
+            
+            <div class="input-group">
+                <label>Distancia:</label>
+                <input type="number" id="distancia" placeholder="Ej: 100">
+                <select id="unidadDistancia">
+                    <option value="1">M</option>
+                    <option value="1000">KM</option>
+                </select>
+            </div>
+
+
+            <div class="input-group">
+                <label>Velocidad:</label>
+                <input type="number" id="velocidad" placeholder="Ej: 20">
+                <span class="unit-label">m/s</span>
+            </div>
+
+
+            <div class="input-group">
+                <label>Tiempo:</label>
+                <input type="number" id="tiempo" placeholder="Ej: 5">
+                <select id="unidadTiempo">
+                    <option value="1">S</option>
+                    <option value="60">MIN</option>
+                    <option value="3600">H</option>
+                </select>
+            </div>
+
+
+            <button id="btn-calcular-mru" class="btn-main">CALCULAR INCÓGNITA</button>
+            
+            <div class="resultado-box">
+                <p id="texto-resultado-mru">Ingresa dos valores para hallar el tercero.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="mrua" class="tema">
+        <div class="info">
+            <h2>¿Qué es el MRUA?</h2>
+            <p>La velocidad cambia de forma constante debido a la aceleración.</p>
+        </div>
+
+
+        
+
+
+        <div class="formula-box">
+            <h2>Fórmula Base</h2>
+            <p class="math-display">v_f = v_0 + (a * t)</p>
+        </div>
+
+
+        <div class="calculator">
+            <h2 class="pink-title">¡Calculadora de MRUA!</h2>
+            <p class="instruction">Calcula la Velocidad Final (v_f):</p>
+            
+            <div class="input-group">
+                <label>Velocidad Inicial (m/s):</label>
+                <input type="number" id="v0_mrua" placeholder="Ej: 0">
+            </div>
+            <div class="input-group">
+                <label>Aceleración (m/s²):</label>
+                <input type="number" id="a_mrua" placeholder="Ej: 9.8">
+            </div>
+            <div class="input-group">
+                <label>Tiempo (s):</label>
+                <input type="number" id="t_mrua" placeholder="Ej: 10">
+            </div>
+
+
+            <button id="btn-calcular-mrua" class="btn-main">CALCULAR VELOCIDAD FINAL</button>
+            
+            <div class="resultado-box">
+                <p id="texto-resultado-mrua">Ingresa los datos para calcular v_f.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<script src="JS/script.js"></script>
+</body>
+</html>

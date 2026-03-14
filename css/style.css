@@ -1,0 +1,179 @@
+/* Fuentes estilo consola pixelada */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=VT323&display=swap');
+
+
+:root {
+    --bg-color: #000000;
+    --terminal-green: #00ff41;
+    --retro-blue: #00d2ff;
+    --retro-pink: #ff007f;
+    --text-white: #e0e0e0;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: 'Courier Prime', monospace;
+    margin: 0;
+    padding: 20px;
+    background-image: radial-gradient(#1a1a1a 1px, transparent 1px); /* Fondo de puntos retro */
+    background-size: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    border-bottom: 2px solid var(--terminal-green);
+    margin-bottom: 30px;
+}
+
+
+header h1 {
+    font-family: 'VT323', monospace;
+    font-size: 3.5rem;
+    color: var(--retro-blue);
+    text-shadow: 3px 3px var(--retro-pink); /* Sombra 8-bit */
+}
+
+
+/* --- BOTONES DE MENÚ ALARGADOS --- */
+.menu-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Para que se ajusten en móviles */
+}
+
+
+.btn-menu {
+    background: #1a1a1a;
+    border: 2px solid var(--terminal-green);
+    color: var(--terminal-green);
+    width: 350px; /* Ancho alargado */
+    height: 70px;  /* Altura reducida para que no sea cuadrado */
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+
+.btn-menu:hover {
+    background: #003300;
+    box-shadow: 0 0 15px var(--terminal-green);
+    transform: translateY(-3px);
+}
+
+
+/* --- DISEÑO DE CALCULADORA --- */
+.container {
+    width: 100%;
+    max-width: 650px; /* Limita el ancho para que no se estire de más */
+}
+
+
+.tema { display: none; }
+.tema.active { display: block; }
+
+
+section {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    padding: 25px;
+    box-shadow: 8px 8px 0px #111;
+}
+
+
+.pink-title {
+    color: var(--retro-pink);
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    border-bottom: 1px dashed var(--retro-pink);
+    margin-bottom: 20px;
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+
+label {
+    color: var(--retro-blue);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+input[type="number"] {
+    background: #1a1a1a;
+    border: 2px solid var(--terminal-green);
+    color: white;
+    padding: 12px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+
+select, .unit-label {
+    background: #1a1a1a;
+    border: 2px solid var(--terminal-green);
+    color: var(--terminal-green);
+    padding: 5px 10px;
+    width: fit-content;
+    margin-top: 8px;
+    font-family: 'VT323', monospace;
+}
+
+
+.btn-main {
+    background: var(--retro-pink);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-family: 'VT323', monospace;
+    font-size: 1.6rem;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px #800040;
+}
+
+
+.btn-main:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+
+.resultado-box {
+    background: #041a04;
+    border-left: 5px solid var(--terminal-green);
+    padding: 15px;
+    margin-top: 25px;
+    color: var(--terminal-green);
+}
+
+
+.math-display {
+    background: #000;
+    color: var(--terminal-green);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px dashed var(--terminal-green);
+}
